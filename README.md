@@ -44,3 +44,9 @@ python manage.py showmigrations
 ```bash
 python manage.py createsuperuser
 ```
+
+### crear aplciacion
+
+```bash
+python manage.py startapp "nombre de aplicacion"
+```
