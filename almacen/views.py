@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from datetime import datetime
+from .models import Producto
 
 # Create your views here.
 def index(request):
@@ -21,4 +22,5 @@ def get_json(request):
     return JsonResponse(data)
 
 def get_html(request):
-    return render(request, 'index.html')
+    productos = Producto.objects.all()
+    return render(request, 'index.html', {'productos': productos})

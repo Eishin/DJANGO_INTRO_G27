@@ -9,36 +9,21 @@
 </head>
 <body>
     <h1>Hola Django</h1>
-    <table style="width: 100%;" border="1">
-        <thead style="background-color: #008000;">
-            <tr style="color: #FFFFFF;">
-                <th style="color: #FFFFFF;">
-                    ID
-                </th>
-                <th style="color: #FFFFFF;">
-                    Nombre
-                </th>
-                <th style="color: #FFFFFF;">
-                    Mail
-                </th>
-                <th style="color: #FFFFFF;">
-                    Edad
-                </th>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
             </tr>
-            <tr style="color: #FFFFFF;">
-                <td style="color: #FFFFFF;">
-                    1
-                </td>
-                <td style="color: #FFFFFF;">
-                    erik
-                </td>
-                <td style="color: #FFFFFF;">
-                    erik@almacen.com
-                </td>
-                <td style="color: #FFFFFF;">
-                    25
-                </td>
-
+            <tr>
+                {% for producto in productos %}
+                <td>{{ producto.id }}</td>
+                <td>{{ producto.nombre }}</td>
+                <td>{{ producto.descripcion }}</td>
+                <td>{{ producto.precio }}</td>
+                {% endfor %}                
             </tr>
         </thead>
     </table>

@@ -1,6 +1,6 @@
 from django.db import models
 
-class producto(models.Model):
+class Producto(models.Model):
     nombre = models.CharField(max_length=100)
     descripcion = models.TextField()
     precio = models.DecimalField(max_digits=10, decimal_places=2)
@@ -10,4 +10,5 @@ class producto(models.Model):
         return self.nombre
     
     class Meta:
-        db_table = 'productos'
+        db_table = 'Productos'
+
